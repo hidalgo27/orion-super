@@ -208,6 +208,14 @@ Route::post('/admin/producto/nuevo', [
     'uses' => 'ProductController@store',
     'as' => 'product_store_path',
 ]);
+Route::get('/admin/producto/nuevo/excel', [
+    'uses' => 'ProductController@nuevo_excel',
+    'as' => 'product_nuevo_excel_path',
+]);
+Route::post('/admin/producto/nuevo/excel', [
+    'uses' => 'ProductController@nuevo_excel_store',
+    'as' => 'product_store_excel_path',
+]);
 
 Route::post('admin/{servicio}/mostrar-provincias', [
     'uses' => 'ProductController@mostrarProvincias',

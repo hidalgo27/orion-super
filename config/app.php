@@ -178,6 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         // MaddHatter\LaravelFullCalendar\ServiceProvider::class,
         Khill\Lavacharts\Laravel\LavachartsServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
     ],
 
     /*
@@ -229,6 +230,7 @@ return [
         // 'Calendar' => MaddHatter\LaravelFullCalendar\Facades\Calendar::class,
         'Cart' => Darryldecode\Cart\Facades\CartFacade::class,
         Khill\Lavacharts\Laravel\LavachartsFacade::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ],
 
 ];

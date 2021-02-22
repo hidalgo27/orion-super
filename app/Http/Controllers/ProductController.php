@@ -12,6 +12,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Exports\UsersExport;
+use App\Imports\ProductImport;
 
 class ProductController extends Controller
 {
@@ -42,6 +45,19 @@ class ProductController extends Controller
         $brands = Brand::get();
         $unidades=Unit::get();
         return view('admin.product.nuevo', compact(['categories', 'brands','unidades']));
+    }
+    public function nuevo_excel()
+    {
+        return view('admin.product.nuevo-excel');
+    }
+
+    public function nuevo_excel_store(Request $request)
+    {
+    //    return Excel::download(new UsersExport,'user-excel.xlsx');
+        $excel=$request->file('excel');
+        Excel::import(new ProductImport,$excel);
+        return back()->with('success','Importacion de productos completado');
+
     }
     public function store(Request $request)
     {

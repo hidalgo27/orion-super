@@ -11,10 +11,13 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="row">
-                            <div class="col-9">
+                            <div class="col-8">
                                 <b class="text-danger text-15">LISTA DE PRODUCTOS</b>
                             </div>
-                            <div class="col-3 text-right">
+                            <div class="col-2 text-right">
+                                <a href="{{ route('product_nuevo_excel_path') }}" class="btn btn-success text-white"><i class="fas fa-file-excel"></i> IMPORTAR PRODUCTOS</a>
+                            </div>
+                            <div class="col-2 text-right">
                                 <a href="{{ route('product_nuevo_path') }}" class="btn btn-info text-white"><i class="fas fa-plus-circle"></i> AGREGAR PRODUCTO</a>
                             </div>
                         </div>
