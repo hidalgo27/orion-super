@@ -30,7 +30,7 @@
     "@fullcalendar/core": "^4.2.0",
     "@fullcalendar/daygrid": "^4.2.0",
     "air-datepicker": "^2.2.3",
-    "codemirror": "^5.48.0",
+    "codemirror": "^5.58.2",
     "cross-env": "^5.2.1",
     "grunt": "^1.0.4",
     "slick-carousel": "^1.8.1",
